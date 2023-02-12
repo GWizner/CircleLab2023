@@ -36,10 +36,16 @@ namespace CircleLab2023
                 keepAsk = Validator.getContinue();
                 Console.WriteLine();
             }
-
-            Console.WriteLine($"You have built " + "\x1b[38;5;196m" + $"{totCircles.Count} " +
-                "\x1b[38;5;200m" + "circle(s). " + "\x1b[0m" + "Goodbye.");
-
+            if (totCircles.Count == 1)
+            {
+                Console.WriteLine($"You have built " + "\x1b[38;5;196m" + $"{totCircles.Count} " +
+                    "\x1b[38;5;200m" + "circle. " + "\x1b[0m" + "Goodbye.");
+            }
+            else
+            {
+                Console.WriteLine($"You have built " + "\x1b[38;5;196m" + $"{totCircles.Count} " +
+                    "\x1b[38;5;200m" + "circles. " + "\x1b[0m" + "Goodbye.");
+            }
         }
     }
 }
